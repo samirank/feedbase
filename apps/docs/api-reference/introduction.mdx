@@ -1,0 +1,45 @@
+---
+title: 'Introduction'
+description: 'Welcome to the API documentation for Feedbase'
+---
+
+## Welcome
+
+Welcome to the API documentation for Feedbase. There are two different API's available: 
+<AccordionGroup>
+  <Accordion title="Public API">
+    The public API is used to access public project data. This mainly includes data that is available on your public hub.
+  </Accordion>
+
+  <Accordion title="Project API">
+    The project API is used to access private project data. There are two different scopes for the project API:
+    - Public scope should be used for our [Typescript SDK]('/sdk-reference')
+    - Full Access scope is used to access project data and manage project settings
+  </Accordion>
+</AccordionGroup>
+
+
+## Create a new API key
+
+To access the [Project API](/api-reference/endpoint/project/), you need to provide an API key. You can create a new API key with the necessary scopes by clicking below.
+
+<Card
+  title="Create new key"
+  icon="key"
+  href="https://dash.feedbase.app/settings/general"
+>
+  Create a new API key to access the API.
+</Card>
+
+## Authentication
+
+All project endpoints are protected and require a valid API key. You can provide the API key in the `Authorization` header as a Bearer token.
+
+```typescript
+const response = await fetch('https://api.feedbase.app/v1', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer fb_xxxxxxxxxxxxxxxxxxxx',
+  },
+})
+```

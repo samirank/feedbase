@@ -1,0 +1,41 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env"],
+  "globalDotEnv": [".env"],
+  "globalEnv": [
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "NEXT_PUBLIC_ROOT_DOMAIN",
+    "NEXT_PUBLIC_VERCEL_ENV",
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "RESEND_API_KEY",
+    "VERCEL_TEAM_ID",
+    "VERCEL_PROJECT_ID",
+    "VERCEL_AUTH_TOKEN",
+    "TINYBIRD_API_URL",
+    "TINYBIRD_API_KEY",
+    "VERCEL",
+    "CUSTOM_DOMAIN_WHITELIST",
+    "NODE_ENV"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": ["GITHUB_CLIENT_ID", "GITHUB_SECRET"]
+    },
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "lint": {
+      "dependsOn": ["topo"]
+    },
+    "ts": {
+      "dependsOn": ["topo"]
+    }
+  }
+}

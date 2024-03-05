@@ -1,0 +1,171 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Feedbase Docs",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/logo/favicon.svg",
+  "colors": {
+    "primary": "#8F9EFF",
+    "light": "#e1e1e1",
+    "dark": "#06060A",
+    "background": {
+      "light": "#fff",
+      "dark": "#06060A"
+    },
+    "anchors": {
+      "from": "#030303",
+      "to": "#030303"
+    }
+  },
+  "openapi": "https://api.feedbase.app/v1",
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
+  },
+  "topbarLinks": [
+    {
+      "name": "Sign In",
+      "url": "https://dash.feedbase.app/login"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://dash.feedbase.app/signup"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    { 
+      "name": "SDK Reference",
+      "url": "sdk-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Github",
+      "icon": "github",
+      "url": "https://feedbase.app/github"
+    },
+    {
+      "name": "Public Hub",
+      "icon": "people-group",
+      "url": "https://hub.feedbase.app"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://feedbase.app/discord"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "Development Guide",
+      "pages": ["development/installation", "development/configuration"]
+    },
+    {
+      "group": "Self Hosting",
+      "pages": ["self-hosting/vercel", "self-hosting/docker"]
+    },
+    {
+      "group": "Integrations",
+      "pages": ["integrations/sso"]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/introduction"]
+    },
+    {
+      "group": "Public API",
+      "pages": [
+        "api-reference/endpoint/public/get--changelogs",
+        "api-reference/endpoint/public/get--atom"
+      ]
+    },
+    {
+      "group": "Project API",
+      "pages": [
+        {
+          "group": "Project",
+          "pages": [
+            "api-reference/endpoint/project/get-projects",
+            "api-reference/endpoint/project/patch-projects",
+            "api-reference/endpoint/project/delete-projects"
+          ]
+        },
+        {
+          "group": "Project Invites",
+          "pages": [
+            "api-reference/endpoint/project-invites/get-projects-invites",
+            "api-reference/endpoint/project-invites/post-projects-invites",
+            "api-reference/endpoint/project-invites/delete-projects-invites"
+          ]
+        },
+        {
+          "group": "Project Members",
+          "pages": [
+            "api-reference/endpoint/project-members/get-projects-members"
+          ]
+        },
+        {
+          "group": "Project Config",
+          "pages": [
+            "api-reference/endpoint/project-config/get-projects-config",
+            "api-reference/endpoint/project-config/patch-projects-config"
+          ]
+        },
+        {
+          "group": "Changelog",
+          "pages": [
+            "api-reference/endpoint/changelog/get-projects-changelogs",
+            "api-reference/endpoint/changelog/post-projects-changelogs",
+            "api-reference/endpoint/changelog/patch-projects-changelogs",
+            "api-reference/endpoint/changelog/delete-projects-changelogs"
+          ]
+        },
+        {
+          "group": "Feedback",
+          "pages": [
+            "api-reference/endpoint/feedback/get-projects-feedback-all",
+            "api-reference/endpoint/feedback/get-projects-feedback",
+            "api-reference/endpoint/feedback/get-projects-feedback-upvotes",
+            "api-reference/endpoint/feedback/post-projects-feedback",
+            "api-reference/endpoint/feedback/patch-projects-feedback",
+            "api-reference/endpoint/feedback/delete-projects-feedback"
+          ]
+        },
+        {
+          "group": "Feedback Tags",
+          "pages": [
+            "api-reference/endpoint/feedback-tags/get-projects-feedback-tags",
+            "api-reference/endpoint/feedback-tags/post-projects-feedback-tags",
+            "api-reference/endpoint/feedback-tags/delete-projects-feedback-tags"
+          ]
+        },
+        {
+          "group": "Feedback Comments",
+          "pages": [
+            "api-reference/endpoint/feedback-comments/get-projects-feedback-comments",
+            "api-reference/endpoint/feedback-comments/delete-projects-feedback-comments"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+  "footerSocials": {
+    "twitter": "https://twitter.com/0xChroxify",
+    "github": "https://github.com/chroxify/feedbase"
+  }
+}
